@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vista</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>nombre</th>
+                <th>descripcion</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% nombres.forEach((nombre, index) => { %>
+                <tr>
+                    <td><%= id[index] %></td>
+                    <td><%= nombre %></td>
+                    <td><%= descripciones[index] %></td>
+                    <td>
+                        <!-- <form action="/delete" method="post">
+                            <input type="hidden" value="<%= id[index] %>" name="id">
+                            <button type="submit">borrar</button>
+                        </form> -->
+                        <a href='/delete/<%= id[index]%>'>borrar</a>
+                        <a href='/update/<%= id[index]%>'>actualizar</a>
+                    </td>
+                </tr>
+            <% }) %>
+
+        </tbody>
+    </table>
+    <a href="/create">create</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+import express from "express";
+//para crear una ruta absoluta 
+import {dirname, join} from 'path'
+//
+import { fileURLToPath } from "url";
+//Importar modulo de routes
+import indexRoutes from './routers/index.routes.js'
+import bodyParser from "body-parser";
+
+import { PORT } from './config.js'
+
+const app = express()
+
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.json())
+
+//ruta absoluta dinamica del proyecto
+const __dirname = dirname(fileURLToPath(import.meta.url))
+//pasar la carpeta views a express
+app.set('views', join(__dirname,'views'))
+//para los html
+app.set('view engine', 'ejs')
+//usuar los routes
+app.use(indexRoutes)
+//usar la base de datos
+
+export default app
