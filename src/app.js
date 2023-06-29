@@ -16,10 +16,15 @@ app.use(express.json())
 
 //ruta absoluta dinamica del proyecto
 const __dirname = dirname(fileURLToPath(import.meta.url))
-//pasar la carpeta views a express
-app.set('views', join(__dirname,'views'))
+
 //para los html
 app.set('view engine', 'ejs')
+
+//pasar la carpeta views a express
+app.set('views', join(__dirname,'views'))
+
+app.use(express.static(join(__dirname,'public')))
+
 //usuar los routes
 app.use(indexRoutes)
 //usar la base de datos
