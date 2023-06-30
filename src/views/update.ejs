@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>edit</title>
+    <link rel="stylesheet" href="../style/create.style.css">
+
+    <title>Document</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <%- include('partials/menu') %>
+    <h1 class="funcion">Actualizar Articulo</h1>
+    <form method="POST" class="form">
 
-        <label for="">nombre</label>
-        <input type="text" name="nombre" id="nombre" value="<%= nombre %>">
-
-        <label for="">descripcion</label>
-        <input type="text" name="descripcion" id="descripcion" value="<%= descripcion %>">
-
-        <button type="submit">click</button>
+        <div class="form__grupo">
+            <label for="nombre" class="form__label">Nombre del Articulo</label>
+            <input type="text" class="form__input" name="nombre" id="nombre" value="<%= nombre %>">
+        </div>
+        <div class="form__grupo">
+            <label for="descripcion" class="form__label">Descripcion del Articulo</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="form__txtarea"><%= descripcion %></textarea>
+        </div>
+        <button type="submit" class="form__button">Agregar</button>
 
     </form>
-    <a href="/">home</a>
+
+
 </body>
 </html>

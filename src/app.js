@@ -7,15 +7,19 @@ import { fileURLToPath } from "url";
 import indexRoutes from './routers/index.routes.js'
 import bodyParser from "body-parser";
 
-import { PORT } from './config.js'
+
 
 const app = express()
+
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json())
 
+
 //ruta absoluta dinamica del proyecto
 const __dirname = dirname(fileURLToPath(import.meta.url))
+
+
 
 //para los html
 app.set('view engine', 'ejs')

@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/create.style.css">
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <%- include('partials/menu') %>
 
-        <label for="">nombre</label>
-        <input type="text" name="nombre" id="nombre">
+    <h1 class="funcion">Agregar articulo</h1>
 
-        <label for="">descripcion</label>
-        <input type="text" name="descripcion" id="descripcion">
+    <form method="POST" class="form">
 
-        <button type="submit">click</button>
+        <div class="form__grupo">
+            <label for="nombre" class="form__label">Nombre del Articulo</label>
+            <input type="text" class="form__input" name="nombre" id="nombre">
+        </div>
+        <div class="form__grupo">
+            <label for="descripcion" class="form__label" >Descripcion del Articulo</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="form__txtarea"></textarea>
+            <!-- <input type="text" class="form__input" name="descripcion" id="descripcion"> -->
+        </div>
+        <button type="submit" class="form__button">Agregar</button>
 
     </form>
-    <a href="/">home</a>
+
+
 </body>
 </html>

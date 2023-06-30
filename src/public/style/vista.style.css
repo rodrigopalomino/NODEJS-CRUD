@@ -1,0 +1,42 @@
+
+
+.table-conteiner {
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    /* margin: 20px auto; */
+    text-align: center;
+    border-collapse: collapse;
+    
+}
+table th {
+    background-color: #08a783;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px ;
+}
+
+table td {
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+.a-borrar {
+    background-color: red;
+    padding: 3px;
+    
+}
+
+.i-borrar {
+    color: white;
+    width: 12px;
+}

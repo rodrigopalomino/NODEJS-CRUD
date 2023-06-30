@@ -1,0 +1,30 @@
+.form__label, .form__input, .form__button{
+    display: block;
+    margin: 0 auto;
+}
+.form__txtarea {
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.form__button {
+    margin-top: 20px;
+}
+
+.form__label {
+    text-align: center;
+}
+
+.form {
+    margin:40px ;
+}
+
+.form__grupo {
+    margin-top: 25px;
+}
+
+.funcion {
+    text-align: center;
+    margin-top: 40px;
+}
